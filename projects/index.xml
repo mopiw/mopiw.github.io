@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | MOPIMOPI</title>
+    <link>//mopimopi.com/projects/</link>
+      <atom:link href="//mopimopi.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description><language>zh-CN</language>
+  </channel>
+</rss>

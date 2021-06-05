@@ -1,0 +1,54 @@
+:root {
+  --font-sans: "TT Hoves", PingFang SC, Microsoft YaHei, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", PingFang SC, Microsoft YaHei, sans-serif;
+  --font-blod: 500;
+  --font-size-small: 0.75rem;
+  --icon-size: 1.5rem;
+  --body-max-width: 75rem;
+  --body-width: 90%;
+  --body-space: 4.25rem;
+  --header-width: 12.5rem;
+  --logo-size: 5.625rem;
+  --logo-font-size: 1.5rem;
+  --logo-radius: 0.166em;
+  --menu-space: 5.5rem;
+  --menu-li-space: 2em;
+  --button-space: 2rem 0 1rem 0;
+  --site-info-li-space: 0.666em;
+}
+
+:root[data-theme-mode="light"] {
+  --primary: #4445ab;
+  --primary-dark: #353687;
+  --title-color: #252525;
+  --body-background: #fff;
+  --text-color: #444;
+  --text-color-light: #6a6d7b;
+  --border: #e6e2dd;
+  --logo-color: #fff;
+  --logo-background: #252525;
+  --menu-color: #252525;
+  --posts-shadow: 0 0px 30px 0 rgb(0 0 0 / 20%);
+  --table-background: #f3f2f0;
+  --table-background-light: #fcfcfb;
+  --code-background: #f3f2f0;
+  --blockquote-background: rgb(68 69 171 / 30%);
+}
+
+:root[data-theme-mode="dark"] {
+  --primary: #8e8fff;
+  --primary-dark: #b3b4ff;
+  --title-color: #f7f7f9;
+  --body-background: #1e1e20;
+  --text-color: #dedee4;
+  --text-color-light: #a8a5b3;
+  --border: #454449;
+  --logo-color: #2a2a2e;
+  --logo-background: #f7f7f9;
+  --menu-color: #f7f7f9;
+  --posts-shadow: 0 0px 30px 0 rgb(0 0 0 / 60%);
+  --table-background: #171618;
+  --table-background-light: #2a282b;
+  --code-background: #2a2a2e;
+  --blockquote-background: rgb(142 143 255 / 30%);
+}
