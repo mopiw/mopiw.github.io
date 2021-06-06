@@ -199,7 +199,7 @@ ul {
 
 .posts {
   margin-bottom: 3.125rem;
-  box-shadow: var(--posts-shadow);
+  box-shadow: var(--big-shadow);
   border-radius: 1.25rem;
   background: var(--body-background);
 }
@@ -627,7 +627,6 @@ ul {
   color: var(--primary);
   font-weight: 500;
   border-radius: 1.25rem;
-  box-shadow: var(--posts-shadow);
   letter-spacing: 0.025em;
 }
 
@@ -808,44 +807,4 @@ ul {
 
 .chroma .kr {
   color: #7C4DFF;
-}
-
-/* 
- Twikoo
- ======
-*/
-
-#twikoo {
-  padding: 4.25rem 0 0 0;
-}
-
-#twikoo a {
-  color: var(--primary);
-}
-
-#twikoo a:hover {
-  color: var(--primary-dark);
-}
-
-.twikoo .el-input-group__append, .twikoo .el-input-group__prepend {
-  background-color: var(--code-background) !important;
-  border-color: var(--border) !important;
-}
-
-.twikoo .el-input__inner:focus, .twikoo .el-textarea__inner:focus {
-  border-color: var(--primary) !important;
-}
-
-.twikoo .el-button--primary.is-disabled, .twikoo .el-button--primary.is-disabled:active, .twikoo .el-button--primary.is-disabled:focus, .twikoo .el-button--primary.is-disabled:hover {
-  background-color: var(--primary-dark) !important;
-  border-color: var(--primary-dark) !important;
-}
-
-.el-button--primary {
-  background-color: var(--primary) !important;
-  border-color: var(--primary) !important;
-}
-
-.tk-icon svg path {
-  fill: var(--primary);
 }

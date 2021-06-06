@@ -25,10 +25,11 @@
   --text-color: #444;
   --text-color-light: #6a6d7b;
   --border: #e6e2dd;
+  --big-shadow: 0 0px 30px 0 rgb(0 0 0 / 20%);
+  --shadow: -1px 3px 8px -1px rgb(0 0 0 / 10%);
   --logo-color: #fff;
   --logo-background: #252525;
   --menu-color: #252525;
-  --posts-shadow: 0 0px 30px 0 rgb(0 0 0 / 20%);
   --table-background: #f3f2f0;
   --table-background-light: #fcfcfb;
   --code-background: #f3f2f0;
@@ -43,10 +44,11 @@
   --text-color: #dedee4;
   --text-color-light: #a8a5b3;
   --border: #454449;
+  --big-shadow: 0 0px 30px 0 rgb(0 0 0 / 60%);
+  --shadow: -1px 3px 8px -1px rgb(0 0 0 / 50%);
   --logo-color: #2a2a2e;
   --logo-background: #f7f7f9;
   --menu-color: #f7f7f9;
-  --posts-shadow: 0 0px 30px 0 rgb(0 0 0 / 60%);
   --table-background: #171618;
   --table-background-light: #2a282b;
   --code-background: #2a2a2e;

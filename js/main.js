@@ -1,21 +1,29 @@
 // dark mode
+
 let getLocalStorage = localStorage.getItem("theme-mode");
 let html = document.querySelector("html");
 let getHtmlThemeMode = html.getAttribute("data-theme-mode");
 const themeModeSwitch = document.querySelectorAll(".theme-mode-switch-icon");
 
-function themeMode(mode) {
-  if (mode != "") {
+function themeMode(mode, onload) {
+  if (onload) {
+    html.setAttribute("data-theme-mode", getLocalStorage);
+    localStorage.setItem("theme-mode", getLocalStorage);
+    window.onload = function () {
+      window.CUSDIS.setTheme(getLocalStorage)
+    }
+  } else if (mode != "") {
     html.setAttribute("data-theme-mode", mode);
     localStorage.setItem("theme-mode", mode);
+    window.CUSDIS.setTheme(mode)
   }
 }
 
 if (getLocalStorage === "dark") {
-  themeMode(getLocalStorage);
+  themeMode(getLocalStorage, true)
 } else if (getLocalStorage === null) {
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    themeMode("dark");
+    themeMode("dark", true)
   }
 }
 
@@ -27,7 +35,7 @@ window
     } else {
       themeMode("light");
     }
-});
+  });
 
 for (const element of themeModeSwitch) {
   element.addEventListener("click", function (e) {
@@ -38,6 +46,7 @@ for (const element of themeModeSwitch) {
     }
   });
 }
+
 
 // posts images full width
 const postP = document.querySelectorAll(".post-content p");
@@ -67,19 +76,13 @@ for (const element of imgAlt) {
 const prvs = new Parvus()
 
 // back top top
-window.onscroll = function() {
+window.onscroll = function () {
   let top = document.documentElement.scrollTop;
   const backToTop = document.querySelector('.back-to-top');
 
-  if( top >= 600 ) {
+  if (top >= 600) {
     backToTop.style.opacity = '1'
   } else {
     backToTop.style.opacity = '0'
   }
 }
-
-// twikoo
-twikoo.init({
-  envId: 'mopimopi-1gvt0hk14ef6057e',
-  el: '#comment',
-})
