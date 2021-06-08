@@ -47,7 +47,28 @@ for (const element of themeModeSwitch) {
   })
 }
 
-// posts images full width
+// back top top
+window.onscroll = function () {
+  let top = document.documentElement.scrollTop
+  const backToTop = document.querySelector('.back-to-top')
+
+  if (top >= 600) {
+    backToTop.style.opacity = '1'
+  } else {
+    backToTop.style.opacity = '0'
+  }
+}
+
+const imgAlt = document.querySelectorAll('.post-content img')
+for (const element of imgAlt) {
+  if (element.getAttribute('alt')) {
+    element.insertAdjacentHTML(
+      'afterend',
+      `<span class="img-alt">${element.getAttribute('alt')}</span>`
+    )
+  }
+}
+
 const postP = document.querySelectorAll('.post-content p')
 const postWidth = document.querySelector('.post-content').offsetWidth
 
@@ -60,28 +81,15 @@ for (const element of postP) {
   }
 }
 
-// img alt
-const imgAlt = document.querySelectorAll('.post-content img')
-for (const element of imgAlt) {
-  if (element.getAttribute('alt')) {
-    element.insertAdjacentHTML(
-      'afterend',
-      `<span class="img-alt">${element.getAttribute('alt')}</span>`
-    )
-  }
-}
-
-// parvus init
 const prvs = new Parvus()
 
-// back top top
-window.onscroll = function () {
-  let top = document.documentElement.scrollTop
-  const backToTop = document.querySelector('.back-to-top')
-
-  if (top >= 600) {
-    backToTop.style.opacity = '1'
-  } else {
-    backToTop.style.opacity = '0'
-  }
+if (document.querySelector('.post-content .gallery')) {
+  const macyInstance = Macy({
+    container: '.gallery',
+    columns: 2,
+    margin: 0,
+    breakAt: {
+      768: 1
+    }
+  })
 }
